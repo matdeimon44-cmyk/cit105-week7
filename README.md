@@ -53,3 +53,179 @@ How to Run
 Conclusion
 
 This assignment helped me understand relational database design, primary and foreign keys, SQL constraints, and CSV data validation using Python and SQLite.
+
+
+## SQL Queries and Results
+### Query 1: List every workshop, most recent first
+
+SQL:
+SELECT * FROM workshops ORDER BY workshop_date DESC;
+
+Result:
+The query successfully listed all 8 original workshops, ordered from the most recent date to the oldest.
+
+### Query 2: Count attendees for each workshop
+
+SQL:
+SELECT w.workshop_title, COUNT(a.attendee_id) AS attendee_count
+FROM workshops w
+LEFT JOIN attendees a ON w.workshop_id = a.workshop_id
+GROUP BY w.workshop_id, w.workshop_title
+ORDER BY w.workshop_id;
+
+Results:
+
+| Workshop | Attendees |
+|---|---:|
+| Intro to Git and GitHub | 6 |
+| Python for Data Cleaning | 6 |
+| Linux Command Line Basics | 7 |
+| SQL Joins Clinic | 9 |
+| Azure Fundamentals Lab | 4 |
+| Network Troubleshooting with Wireshark | 3 |
+| Resume Review for IT Careers | 0 |
+| Prompt Writing for Developers | 0 |
+
+Total: 35 attendees across 8 workshops.
+
+### Query 3: Attendees and Their Workshops
+
+SQL:
+```sql
+SELECT a.attendee_id, a.first_name, a.last_name,
+       a.email, w.workshop_title
+FROM attendees a
+JOIN workshops w
+ON a.workshop_id = w.workshop_id;
+```
+
+Result:
+The INNER JOIN successfully matched all 35 original
+attendees with their corresponding workshop titles.
+
+This demonstrates the relationship between the
+workshops and attendees tables.
+
+### Query 4: Attendees Without .edu Email Addresses
+
+SQL:
+```sql
+SELECT *
+FROM attendees
+WHERE LOWER(TRIM(email)) NOT LIKE '%.edu';
+```
+
+Result:
+8 attendees were found with email addresses that
+do not end in .edu.
+
+The query uses LOWER, TRIM, and NOT LIKE to
+filter email addresses.
+
+### Query 5: Workshop With the Most Attendees
+
+SQL:
+```sql
+SELECT w.workshop_title,
+       COUNT(a.attendee_id) AS attendee_count
+FROM workshops w
+LEFT JOIN attendees a
+ON w.workshop_id = a.workshop_id
+GROUP BY w.workshop_id, w.workshop_title
+ORDER BY attendee_count DESC
+LIMIT 1;
+```
+
+Result:
+
+| Workshop | Attendees |
+|---|---:|
+| SQL Joins Clinic | 9 |
+
+SQL Joins Clinic had the highest number of
+registrations in the original dataset.
+
+### Query 6: Update a Workshop Location
+
+SQL:
+```sql
+UPDATE workshops
+SET location = 'Room 305'
+WHERE workshop_id = 1;
+```
+
+Result:
+The location of workshop ID 1 was changed to
+Room 305.
+
+The UPDATE statement was designed to modify
+exactly one workshop.
+
+### Query 7: Delete One Attendee
+
+SQL:
+```sql
+DELETE FROM attendees
+WHERE attendee_id = 1;
+```
+
+Result:
+Rows deleted: 1
+
+The attendee with ID 1 was deleted successfully.
+
+The workshop "Intro to Git and GitHub" continued
+to exist after the deletion.
+
+This demonstrates that deleting a child record
+does not delete its parent workshop.
+
+### Query 8: Insert a Workshop Without Attendees
+
+SQL:
+```sql
+INSERT INTO workshops
+(workshop_code, workshop_title, workshop_date,
+ location, format, instructor, capacity)
+VALUES
+('WS999', 'Advanced Python Workshop',
+ '2026-12-15', 'Room 205', 'In-person',
+ 'Prof. Smith', 25);
+```
+
+Verification:
+```sql
+SELECT w.workshop_title,
+       COUNT(a.attendee_id)
+FROM workshops w
+LEFT JOIN attendees a
+ON w.workshop_id = a.workshop_id
+WHERE w.workshop_code = 'WS999'
+GROUP BY w.workshop_id;
+```
+
+Result:
+Advanced Python Workshop | 0 attendees
+
+The new workshop was inserted successfully
+without requiring any attendee registrations.
+
+This demonstrates that workshop information
+can exist independently of attendee records.
+
+### Final Reflection
+
+In this assignment, I learned how to design a
+relational database using SQLite and Python.
+
+I created two related tables, imported CSV data,
+validated registrations, prevented duplicates,
+and used SQL queries to retrieve and modify data.
+
+The project helped me understand primary keys,
+foreign keys, JOIN operations, aggregate functions,
+UPDATE, DELETE, and INSERT statements.
+
+The database design also allows workshops to exist
+without attendees, improving data organization
+and reducing redundancy.
