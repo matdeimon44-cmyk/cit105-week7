@@ -1,0 +1,40 @@
+workshop_code,workshop_title,workshop_date,location,format,instructor,capacity,first_name,last_name,email,role,signup_date
+WS101,Intro to Git and GitHub,2026-09-12,Computer Lab B,In-person,Prof. Ana Ruiz,25,Maria,Gonzalez,mgonzalez@au.edu,Student,2026-09-01
+WS101,Intro to Git and GitHub,2026-09-12,Computer Lab B,In-person,Prof. Ana Ruiz,25,James,Carter,jcarter@au.edu,Student,2026-09-02
+WS101,Intro to Git and GitHub,2026-09-12,Computer Lab B,In-person,Prof. Ana Ruiz,25,Sofia,Ramirez,sofia.ramirez22@gmail.com,Guest,2026-09-03
+WS101,Intro to Git and GitHub,2026-09-12,Computer Lab B,In-person,Prof. Ana Ruiz,25,Kevin,Nguyen,knguyen@au.edu,Student,2026-09-04
+WS101,Intro to Git and GitHub,2026-09-12,Computer Lab B,In-person,Prof. Ana Ruiz,25,Laura,Fernandez,lfernandez@au.edu,Staff,2026-09-05
+WS101,Intro to Git and GitHub,2026-09-12,Computer Lab B,In-person,Prof. Ana Ruiz,25,Andre,Thompson,andre.t@outlook.com,Guest,2026-09-08
+WS102,Python for Data Cleaning,2026-09-26,Room 204,In-person,Prof. Daniel Ortiz,20,Maria,Gonzalez,mgonzalez@au.edu,Student,2026-09-15
+WS102,Python for Data Cleaning,2026-09-26,Room 204,In-person,Prof. Daniel Ortiz,20,Diego,Morales,dmorales@au.edu,Student,2026-09-16
+WS102,Python for Data Cleaning,2026-09-26,Room 204,In-person,Prof. Daniel Ortiz,20,Priya,Patel,ppatel@au.edu,Faculty,2026-09-16
+WS102,Python for Data Cleaning,2026-09-26,Room 204,In-person,Prof. Daniel Ortiz,20,Nicole,Brooks,nbrooks@au.edu,Student,2026-09-18
+WS102,Python for Data Cleaning,2026-09-26,Room 204,In-person,Prof. Daniel Ortiz,20,Luis,Herrera,lherrera@au.edu,Student,2026-09-20
+WS102,Python for Data Cleaning,2026-09-26,Room 204,In-person,Prof. Daniel Ortiz,20,Tom,Walsh,tom.walsh@yahoo.com,Visitor,2026-09-21
+WS103,Linux Command Line Basics,2026-10-03,Online (Zoom),Online,Prof. Grace Kim,40,Kevin,Nguyen,knguyen@au.edu,Student,2026-09-22
+WS103,Linux Command Line Basics,2026-10-03,Online (Zoom),Online,Prof. Grace Kim,40,Aisha,Johnson,ajohnson@au.edu,Student,2026-09-23
+WS103,Linux Command Line Basics,2026-10-03,Online (Zoom),Online,Prof. Grace Kim,40,Carlos,Vega,carlosvega.dev@gmail.com,Guest,2026-09-24
+WS103,Linux Command Line Basics,2026-10-03,Online (Zoom),Online,Prof. Grace Kim,40,Emily,Chen,echen@au.edu,Student,2026-09-24
+WS103,Linux Command Line Basics,2026-10-03,Online (Zoom),Online,Prof. Grace Kim,40,Rafael,Castro,rcastro@au.edu,Staff,2026-09-25
+WS103,Linux Command Line Basics,2026-10-03,Online (Zoom),Online,Prof. Grace Kim,40,Jasmine,Reyes,,Student,2026-09-26
+WS103,Linux Command Line Basics,2026-10-03,Online (Zoom),Online,Prof. Grace Kim,40,Omar,Haddad,ohaddad@au.edu,Student,2026-09-28
+WS103,Linux Command Line Basics,2026-10-03,Online (Zoom),Online,Prof. Grace Kim,40,Valentina,Rossi,vrossi@au.edu,Faculty,2026-09-29
+WS104,SQL Joins Clinic,2026-10-10,Computer Lab B,Hybrid,Prof. Daniel Ortiz,30,Diego,Morales,dmorales@au.edu,Student,2026-09-29
+WS104,SQL Joins Clinic,2026-10-10,Computer Lab B,Hybrid,Prof. Daniel Ortiz,30,Aisha,Johnson,ajohnson@au.edu,Student,2026-09-30
+WS104,SQL Joins Clinic,2026-10-10,Computer Lab B,Hybrid,Prof. Daniel Ortiz,30,Brian,Lee,brian.lee88@outlook.com,Guest,2026-10-01
+WS104,SQL Joins Clinic,2026-10-10,Computer Lab B,Hybrid,Prof. Daniel Ortiz,30,Natalia,Suarez,nsuarez@au.edu,Student,2026-10-01
+WS104,SQL Joins Clinic,2026-10-10,Computer Lab B,Hybrid,Prof. Daniel Ortiz,30,Emily,Chen,echen@au.edu,Student,2026-10-02
+WS104,SQL Joins Clinic,2026-10-10,Computer Lab B,Hybrid,Prof. Daniel Ortiz,30,Michael,Ward,mward@au.edu,Student,2026-10-03
+WS104,SQL Joins Clinic,2026-10-10,Computer Lab B,Hybrid,Prof. Daniel Ortiz,30,Natalia,Suarez,nsuarez@au.edu,Student,2026-10-04
+WS104,SQL Joins Clinic,2026-10-10,Computer Lab B,Hybrid,Prof. Daniel Ortiz,30,Gabriel,Silva,gsilva@au.edu,Staff,2026-10-05
+WS104,SQL Joins Clinic,2026-10-10,Computer Lab B,Hybrid,Prof. Daniel Ortiz,30,Hannah,Price,hannah.price@gmail.com,Guest,2026-10-06
+WS104,SQL Joins Clinic,2026-10-10,Computer Lab B,Hybrid,Prof. Daniel Ortiz,30,Isabel,Mendoza,imendoza@au.edu,Student,2026-10-07
+WS105,Azure Fundamentals Lab,2026-10-17,Computer Lab A,In-person,Prof. Marco Bellini,20,Omar,Haddad,ohaddad@au.edu,Student,2026-10-08
+WS105,Azure Fundamentals Lab,2026-10-17,Computer Lab A,In-person,Prof. Marco Bellini,20,Ricardo,Pena,rpena@au.edu,Student,2026-10-09
+WS105,Azure Fundamentals Lab,2026-10-17,Computer Lab A,In-person,Prof. Marco Bellini,20,Chloe,Martin,chloe.martin@yahoo.com,Guest,2026-10-10
+WS105,Azure Fundamentals Lab,2026-10-17,Computer Lab A,In-person,Prof. Marco Bellini,20,Priya,Patel,ppatel@au.edu,Faculty,2026-10-12
+WS106,Network Troubleshooting with Wireshark,2026-10-31,Computer Lab A,In-person,Prof. Ana Ruiz,18,James,Carter,jcarter@au.edu,Student,2026-10-15
+WS106,Network Troubleshooting with Wireshark,2026-10-31,Computer Lab A,In-person,Prof. Ana Ruiz,18,Fatima,Ali,fali@au.edu,Student,2026-10-18
+WS106,Network Troubleshooting with Wireshark,2026-10-31,Computer Lab A,In-person,Prof. Ana Ruiz,18,Sergio,Blanco,sergio.blanco@proton.me,Guest,2026-10-20
+WS107,Resume Review for IT Careers,2026-11-07,Room 110,Hybrid,Carla Mendez,15,,,,,
+WS108,Prompt Writing for Developers,2026-11-14,Online (Zoom),Online,Prof. Grace Kim,50,,,,,
