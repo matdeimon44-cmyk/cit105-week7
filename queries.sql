@@ -25,21 +25,39 @@ ORDER BY attendee_count DESC
 LIMIT 1;
 
 -- 6. Update one workshop's location, changing exactly one row.
-UPDATE workshops SET location = 'Room 205'
-WHERE workshop_id = (SELECT MIN(workshop_id) FROM workshops);
+UPDATE workshops
+SET location = 'Room 305'
+WHERE workshop_id = 1;
+
 SELECT changes() AS rows_updated;
 
 -- 7. Delete a single attendee by id, and show that their workshop still exists afterward.
-DELETE FROM attendees WHERE attendee_id = (SELECT MIN(attendee_id) FROM attendees);
-SELECT changes() AS rows_deleted;
-SELECT w.workshop_id, w.workshop_title
-FROM workshops AS w
-WHERE w.workshop_id = (SELECT MIN(workshop_id) FROM workshops);
+DELETE FROM attendees
+WHERE attendee_id = 1;
 
--- 8. Insert a new workshop with no attendees, proving the insert anomaly is gone.
-INSERT INTO workshops (workshop_code, workshop_title, workshop_date, location, format, instructor, capacity)
-VALUES ('NEW-WK7-001', 'Independent Workshop', '2026-12-01', 'Room 205', 'In-Person', 'TBA', 20);
-SELECT w.workshop_id, w.workshop_title, COUNT(a.attendee_id) AS attendee_count
+SELECT changes() AS rows_deleted;
+
+SELECT workshop_id, workshop_title
+FROM workshops
+WHERE workshop_id = 1;
+
+-- 8. Insert a new workshop with no attendees.
+INSERT INTO workshops
+(workshop_code, workshop_title, workshop_date,
+ location, format, instructor, capacity)
+VALUES
+('WS999', 'Advanced Python Workshop',
+ '2026-12-15', 'Room 205', 'In-person',
+ 'Prof. Smith', 25);
+
+-- Verify that the workshop exists with zero attendees.
+SELECT w.workshop_title,
+       COUNT(a.attendee_id) AS attendee_count
+FROM workshops AS w
+LEFT JOIN attendees AS a
+ON w.workshop_id = a.workshop_id
+WHERE w.workshop_code = 'WS999'
+GROUP BY w.workshop_id, w.workshop_title;
 FROM workshops AS w
 LEFT JOIN attendees AS a ON w.workshop_id = a.workshop_id
 WHERE w.workshop_code = 'NEW-WK7-001'
